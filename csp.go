@@ -12,6 +12,9 @@ type String struct {
 }
 
 func (m String) String() string {
+	if m.S == nil {
+		return ""
+	}
 	return strings.Join(*m.S, ",")
 }
 
@@ -28,6 +31,9 @@ type Int struct {
 
 func (m Int) String() string {
 	var s []string
+	if m.I == nil {
+		return ""
+	}
 	for _, v := range *m.I {
 		s = append(s, strconv.Itoa(v))
 	}
