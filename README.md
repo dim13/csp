@@ -1,3 +1,3 @@
 # Comma Separated Paramenters
 
-see example/main.go for usage example.
+See [example/main.go](example/main.go) for usage.
