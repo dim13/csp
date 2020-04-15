@@ -3,7 +3,7 @@ package csp
 import "testing"
 
 func TestString(t *testing.T) {
-	var s []string
+	s := []string{"x"}
 	String{&s}.Set("a,b,c")
 	for n, v := range []string{"a", "b", "c"} {
 		if s[n] != v {
@@ -13,7 +13,7 @@ func TestString(t *testing.T) {
 }
 
 func TestInt(t *testing.T) {
-	var i []int
+	i := []int{42}
 	Int{&i}.Set("1,2,3")
 	for n, v := range []int{1, 2, 3} {
 		if i[n] != v {

@@ -42,6 +42,7 @@ func (m Int) String() string {
 
 // Set flag value
 func (m Int) Set(s string) error {
+	*m.I = (*m.I)[:0]
 	for _, v := range strings.Split(s, ",") {
 		i, err := strconv.Atoi(v)
 		if err != nil {
